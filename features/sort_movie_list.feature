@@ -23,7 +23,10 @@ Background: movies have been added to database
 
 Scenario: sort movies alphabetically
   # your scenario here
+  When I have opted to see movies sorted in alphabetical order
+  Then I should see movie title "Aladdin" before "Amelie"
 
 Scenario: sort movies in increasing order of release date
   # your scenario here
-
+  When I have opted to see movies sorted in increasing order of release date
+  Then I should see the date "1968-04-06 00:00:00 UTC" before "1981-06-12 00:00:00 UTC"
